@@ -22,16 +22,16 @@ public class CompareVersionImpl {
 		// pego o tamanho do maior para fazer o looping
 		int tamIteracaco = arrV2.length;
 		if (arrV1.length > tamIteracaco){
-			tamIteracaco = arrV1.lenght;
+			tamIteracaco = arrV1.length;
 		}
 
 		// itero os arrays e verifico as versoes
-		for (int i = 0; i < tamIteracao; i++) {
+		for (int i = 0; i < tamIteracaco; i++) {
 			if(this.getVal(arrV1,i)>this.getVal(arrV2,i)){
 				return 1;
 			}
 
-			if(arrV1[1]<arrV2[i]){
+			if(this.getVal(arrV1,i)<this.getVal(arrV2,i)){
 				return -1;
 			}
 		}
